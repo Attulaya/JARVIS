@@ -7,7 +7,7 @@ def chat1(chat):
     message = {"role": "user", "parts":  [{"text": system_message+" "+chat}]}
     messages.append(message)
     data = {"contents": messages}
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAoDuXAvi8rwECZMf2I874p6AWIcS72V8I"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=your api key"
     response = requests.post(url, json=data)
     t1 = response.json()
     t2 = t1.get("candidates")[0].get("content").get("parts")[0].get("text")
