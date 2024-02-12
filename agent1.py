@@ -31,7 +31,7 @@ def run_conversation(user_message):
     data = {"contents": [messages],
             "tools": [{"functionDeclarations": task.defination}]}
 
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAoDuXAvi8rwECZMf2I874p6AWIcS72V8I"  # Replace YOUR_API_KEY with your actual API key
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=your api key"  # Replace YOUR_API_KEY with your actual API key
     response = requests.post(url, json=data)
     if response.status_code != 200:
         print(response.text)
